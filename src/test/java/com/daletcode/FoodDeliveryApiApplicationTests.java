@@ -1,0 +1,13 @@
+package com.daletcode;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class FoodDeliveryApiApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
