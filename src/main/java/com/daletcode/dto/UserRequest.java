@@ -28,7 +28,7 @@ public class UserRequest {
     private String gender;
 
     @JsonProperty("dob")
-    private Date dateOfBirth;
+    private String dateOfBirth;
 
     private String email;
 
@@ -44,28 +44,5 @@ public class UserRequest {
 
     @JsonProperty("device_info")
     private DeviceRequest deviceRequest;
-    @Getter
-    @Setter
-    @ToString
-    public static class DeviceRequest{
-        @JsonProperty("device_id")
-        private String deviceId;
-
-        @JsonProperty("device_type")
-        private String deviceType;
-
-        @JsonProperty("device_model")
-        private String deviceModel;
-
-        @JsonProperty("os_version")
-        private String osVersion;
-
-        @JsonProperty("app_version")
-        private String appVersion;
-
-        @JsonProperty("trust_device")
-        private boolean trustDevice;
-        private String status;
-    }
 
 }

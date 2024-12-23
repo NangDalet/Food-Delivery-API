@@ -1,22 +1,18 @@
 package com.daletcode.dto;
 
-import com.daletcode.enumeration.UserType;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-
-import java.util.Date;
+import jakarta.persistence.Column;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
 @ToString
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class UserResponse {
+public class DeliveryPartnerResponse {
 
-    private Long id;
-
-    private String username;
+    @JsonProperty("id")
+    private String id;
 
     @JsonProperty("first_name")
     private String firstName;
@@ -24,22 +20,34 @@ public class UserResponse {
     @JsonProperty("last_name")
     private String lastName;
 
+    @Column(name = "username")
+    private String username;
+
+    @JsonProperty("password")
+    private String password;
+
+    @JsonProperty("name")
+    private String name;
+
+    @JsonProperty("gender")
     private String gender;
 
     @JsonProperty("dob")
     private String dateOfBirth;
 
-    private String email;
-
     @JsonProperty("phone_number")
     private String phoneNumber;
 
+    private String email;
+
+    @JsonProperty("address")
     private String address;
 
-    @JsonProperty("user_type")
-    private UserType userType;
+    @JsonProperty("vehicle")
+    private String vehicle;
 
-    private String status;
+    @JsonProperty("available")
+    private boolean available;
 
     @JsonProperty("created_at")
     private String createdAt;

@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -43,4 +44,8 @@ public class User extends BaseEntity{
     private UserType userType;
 
     private String status;
+
+    @ToString.Exclude
+    @OneToMany(mappedBy = "user",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    private List<Device> devices;
 }

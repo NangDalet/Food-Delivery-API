@@ -10,7 +10,7 @@ import lombok.*;
 @Data
 @Entity
 @Table(name="tbl_menuItem_photo")
-public class MenuItemPhoto {
+public class MenuItemPhoto extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,6 +31,8 @@ public class MenuItemPhoto {
     private String largeUrl;
 
     private String uploadBy;
+
+    private String status;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private MenuItem menuItem;
