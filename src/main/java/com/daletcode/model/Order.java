@@ -19,6 +19,9 @@ public class Order extends BaseEntity{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
+    @Column(name = "order_id")
+    private String orderId;
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date orderDate = new Date();
 

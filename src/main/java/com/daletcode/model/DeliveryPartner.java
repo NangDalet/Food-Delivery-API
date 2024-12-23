@@ -30,6 +30,7 @@ public class DeliveryPartner extends BaseEntity{
 
     private String gender;
 
+    @Temporal(TemporalType.DATE)
     private Date dateOfBirth;
 
     @Column(name = "phone_number", unique = true,nullable = false)
